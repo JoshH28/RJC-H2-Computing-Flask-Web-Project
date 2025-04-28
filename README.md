@@ -1,4 +1,4 @@
-# AndersonOrders
+# RafflesOrders
 
 RafflesOrders is a canteen ordering website created by Rafflesians, for Rafflesians.
 It allows students to order food and drinks from the canteen during the morning or between periods from the website.

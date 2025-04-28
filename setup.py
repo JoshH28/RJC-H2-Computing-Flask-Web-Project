@@ -31,10 +31,6 @@ for _ in range(no_of_stalls):
         new_stall.food_items.append(new_food)
     session.add(new_stall)
 
-# new_username = 'haydendoo'
-# new_password = 'qqqqqqqq'
-# new_email = 'haydenhow@gmail.com'
-
 # import string
 # from secrets import choice
 # alphabets = string.ascii_letters + string.digits + string.punctuation
