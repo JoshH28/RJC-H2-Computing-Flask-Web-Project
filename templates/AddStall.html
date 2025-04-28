@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="../static/css/addStall.css">
+{% endblock %}
+
+{% block body %}
+
+    <section class="dishes" id="dishes">
+
+        <h3 class="sub-heading"> our dishes </h3>
+        <h1 class="heading"> Add stall </h1>
+    
+        <form  class="container-main" method="POST" enctype="multipart/form-data">
+            {{ form.csrf_token() }}
+            <div class="container-left">
+                <div class="picture">
+                    <img src="../static/assets/picture.png" alt="">
+                </div>
+                
+                {{ form.logo }}
+
+                <br>
+                
+            </div>
+            <div class="container-right">
+                <div class="forms">
+                    <label for="iname">Store name</label>
+                    {{ form.stall_name(style="padding-top: 3px; padding-bottom: 3px; padding-left: 10px; padding-right: 10px;")}}
+                    
+                    {% for field in form.errors %}
+                        {% for error in form.errors[field] %}
+                            <strong class="error">{{ error }}</strong>
+                        {% endfor %}
+                    {% endfor %}
+                    {{ form.submit(class_="btn") }}
+                </div>
+            </div>
+        </form>
+    
+    </section>
+    
+{% endblock %}

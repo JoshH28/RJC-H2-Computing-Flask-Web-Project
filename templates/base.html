@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{% block title %}AndersonOrders - Ordering Made Easier{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="icon" href="../static/assets/avatar2.svg">
+	{% block head %} {% endblock %}
+</head>
+
+<body>
+<header>
+
+    <div class="logo"><i class="fas fa-utensils" style="padding-right: 0.5rem;"></i>Ande Canteen</div>
+
+    <nav class="navbar">
+        <a class="active" href="/">Stalls</a>
+        <a href="profile">Profile</a>
+        <a href="orders">Orders</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <a href="checkout" class="fas fa-shopping-cart"></a>
+        <a href="{{ url_for('logout') }}" class="fas fa-sign-out-alt"></a>
+    </div>
+
+</header>
+
+{% block body %} {% endblock %}
+<footer style="background-color: #f5f5f5; padding: 20px; text-align: center; left: 0; bottom: 0;">
+    <p style="font-size: 15px; text-transform: none;">&copy; 2023 Anderson Orders. All rights reserved.</p>
+    <br>
+    <p style="font-size: 15px; text-transform: none;">Contact us at andecanteen@gmail.com</p>
+    <script>
+    if(window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+    </script>
+    {% block footer %} {% endblock %}
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AndersonOrders - Ordering Made Easier</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/login.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link rel="icon" href="../static/assets/avatar2.svg">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container" style="background-color: lightgray;">
+		<div class="login-content">
+			<form method="POST">
+				{{ form.csrf_token() }}
+				<img src="../static/assets/avatar2.svg">
+				<h2 class="title">Password reset</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Email</h5>
+						{{ form.email(class_="input") }}
+           		   </div>
+           		</div>
+				{% if incorrect %}
+					<div class="incorrect">Email does not exist</div>
+				{% endif %}
+				{% for field, errors in form.errors.items() %}
+					<div class="incorrect">
+						{{ ''.join(errors) }}
+					</div>
+				{% endfor %}
+				{{ form.submit(class_="btn") }}
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="../static/scripts/login.js"></script>
+</body>
+<footer>
+<script>
+	if ( window.history.replaceState ) {
+		window.history.replaceState( null, null, window.location.href );
+	}
+</script>
+</footer>
+</html>

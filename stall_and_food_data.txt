@@ -1,0 +1,91 @@
+6
+Japanese Stall
+japanese.png
+4
+Crab Stick Sushi
+japanese_crabStickSushi.jpg
+1.00
+Cucumber Sushi
+japanese_cucumberSushi.jpg
+1.00
+Ramen
+japanese_ramen.jpg
+4.50
+Chicken Curry Katsu
+japanese_chickenCurryKatsu.jpg
+4.50
+Chicken Rice Stall
+chickenRice.png
+4
+Smoked Chicken Rice
+chicken_smokeChickenRice.jpg
+3.00
+Smoked Duck Rice
+chicken_smokeDuckRice.jpg
+3.00
+Char Siew Rice
+chicken_charSiewRice.jpg
+3.00
+Hainanese Chicken Rice
+chicken_hainaneseChickenRice.jpg
+3.00
+Western Stall
+western.png
+4
+Chicken Burger
+western_chickenBurger.jpg
+3.50
+Bolognese Pasta
+western_bolognesePasta.jpg
+3.00
+Hot Dog
+western_hotdog.jpg
+2.50
+Mac N Cheese
+western_macNCheese.jpg
+3.00
+Fruit Stall
+fruit.png
+4
+Mixed Fruit
+fruit_mixedFruit.jpeg
+1.50
+Watermelon
+fruit_watermelon.jpg
+1.50
+Apple
+fruit_apple.jpeg
+1.50
+Orange Juice
+fruit_orangeJuice.jpeg
+1.50
+Drink Stall
+drink.png
+4
+Milo
+drink_milo.jpg
+1.00
+Coffee
+drink_coffee.jpeg
+0.90
+Tea
+drink_tea.jpg
+0.90
+Packet Drink
+drink_packetDrink.jpg
+0.90
+Noodle Stall
+noodle.png
+4
+Curry Noodle
+noodle_curryNoodle.jpg
+3.00
+Noodle Soup
+noodle_noodleSoup.jpg
+3.00
+Maggi Noodle
+noodle_maggiNoodle.jpg
+2.50
+Pan Me
+noodle_panMee.jpg
+3.00

@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}Checkout{% endblock %}
+
+{% block head %}
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../static/css/checkout.css">
+
+{% endblock %}
+
+{% block body %}
+
+<section class="dishes" id="dishes">
+
+    <br>
+    <br>
+    <br>
+
+    <h1 class="heading"> Cart </h1>
+    <div class="checkout-container">
+        <div class="checkout-container-1">
+            <!-- first div box -->
+            <table>
+                <tr>
+                  <th>Item</th>
+                  <th>Stall</th>
+                </tr>
+                {% for food in food_ordered %}
+                  <tr>
+                    <td>{{ food[1] }}</td>
+                    <td>{{ food[3] }}</td>
+                  </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="checkout-container-2">
+            <!-- second div box -->
+            <table>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+                {% for food in food_ordered %}
+                  <tr>
+                    <td>${{ '%0.2f' | format(food[2]|float) }}</td>
+                    <td>
+                      <a href="decrease-quantity/{{ loop.index0 }}">-</a>
+                      {{ food[0] }}
+                      <a href="increase-quantity/{{ loop.index0 }}">+</a>
+                    </td>
+                  </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="checkout-container-3">
+            <!-- subtotal div box -->
+            <div class="checkout-container-3-1">
+                <p>Subtotal</p>
+            </div>
+            <div class="checkout-container-3-2">
+                <p class="checkout-container-3-2-p">${{ '%0.2f' | format(subtotal|float) }}</p>
+                <form method="POST">
+                  {{ form.csrf_token() }}
+                  {{ form.submit(class_="checkout-button", style="cursor: pointer;") }}
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- loader part  -->
+<!-- <div class="loader-container">
+    <img src="../static/assets/images/loader.gif" alt="">
+</div> -->
+
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+<!-- custom js file link  -->
+<!-- <script src="../static/scripts/gif_animation.js"></script> -->
+
+{% endblock %}

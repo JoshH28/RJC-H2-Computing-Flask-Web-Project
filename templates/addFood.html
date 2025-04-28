@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../static/css/addFood.css">
+
+{% endblock %}
+
+{% block body %}
+
+<!-- dishes section starts  -->
+
+<section class="dishes" id="dishes">
+
+    <h3 class="sub-heading"> our dishes </h3>
+    <h1 class="heading"> Add food </h1>
+
+    <div class="container-main">
+        <div class="container-left">
+            <div class="picture">
+                <img src="../static/assets/picture.png" alt="">
+            </div>
+            <div class="button">
+                <p>add picture</p>
+            </div>
+        </div>
+        <div class="container-right">
+            <form class="forms">
+                <label for="iname">Item name:</label>
+                <input type="text" id="iname" name="iname">
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price"><br>
+                <input type="submit" value="Submit" class="submit">
+            </form>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}
